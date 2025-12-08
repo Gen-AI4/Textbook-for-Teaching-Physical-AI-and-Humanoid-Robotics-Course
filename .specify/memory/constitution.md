@@ -1,55 +1,60 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- SYNC IMPACT REPORT
+- Version change: 1.0.0 → 1.1.0
+- Modified principles:
+  - Principle 1: Content focused on Physical AI and Robotics education
+  - Principle 2: Content focused on accessibility and pedagogical effectiveness
+  - Principle 3: Content focused on reproducible research and experimentation
+  - Principle 4: Content focused on interdisciplinary integration
+  - Principle 5: Content focused on safety and ethical considerations
+  - Principle 6: Added principle for simulation-based learning
+- Governance: Added specific governance rules for textbook content
+- Templates requiring updates:
+  - .specify/templates/plan-template.md: ✅ updated
+  - .specify/templates/spec-template.md: ✅ updated
+  - .specify/templates/tasks-template.md: ✅ updated
+- Follow-up TODOs: None
+-->
+
+# Textbook for Teaching Physical AI and Humanoid Robotics Course Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Physical AI and Robotics Education First
+The textbook must prioritize practical understanding of Physical AI and Humanoid Robotics concepts. All theoretical explanations must be grounded in real-world applications and examples from robotics research. Content must be self-contained with sufficient technical depth to enable understanding without requiring external references for core concepts.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Accessibility and Pedagogical Effectiveness
+Content must be structured to accommodate diverse learning styles and academic backgrounds. Complex topics should be broken into digestible sections with clear learning objectives. All concepts must be explained using multiple representations (textual, visual, mathematical, and practical examples). The textbook should build understanding incrementally, ensuring prerequisites are clearly identified.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Reproducible Research and Experimentation
+All experimental content, algorithms, and code examples must be fully reproducible. The textbook must include detailed setup instructions, version specifications, and troubleshooting guides. Code examples must be tested and verified in multiple environments. Experimental procedures must be documented with expected outcomes and common failure modes.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Interdisciplinary Integration
+The textbook must seamlessly integrate concepts from AI, robotics, control theory, biomechanics, and machine learning. Cross-references between related topics should be explicit. The content must demonstrate how different disciplines complement each other in creating humanoid robots. Examples should draw from multiple fields to show practical integration.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Safety and Ethical Considerations
+Safety protocols must be emphasized throughout all practical sections. Ethical implications of AI and robotics research must be discussed in context. The textbook must include guidelines for responsible research practices. Content must address potential risks and mitigation strategies for humanoid robotics applications.
 
-### [PRINCIPLE_6_NAME]
+### VI. Simulation-Based Learning
+Virtual environments and simulators must be primary tools for student learning. The textbook must provide detailed instructions for using simulation platforms. Practical assignments should begin in simulation before attempting real-world implementation. Simulation-first approach ensures safety and reduces hardware requirements for students.
 
+## Additional Constraints
 
-[PRINCIPLE__DESCRIPTION]
+### Technology Stack Requirements
+The textbook must utilize open-source tools, frameworks, and simulators to ensure accessibility. Preferred platforms include Gazebo, PyBullet, ROS/ROS2, and Python-based libraries. All code examples must be compatible with common Linux distributions. Hardware recommendations should focus on affordable, widely-available components suitable for educational institutions.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Content Standards
+All chapters must include learning objectives, key concepts summary, and practical exercises. Mathematical concepts must be presented with both theoretical background and practical applications. Figures and diagrams must be clear and professionally rendered. External resources and further reading must be curated and regularly updated.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Development Workflow
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### Content Review Process
+All content must undergo technical accuracy review by domain experts in AI and robotics. Peer review by educators with experience in humanoid robotics pedagogy is mandatory. Student feedback from pilot implementations must be incorporated before finalization. Accessibility review must ensure content is usable for diverse learner populations.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Quality Gates
+All code examples must pass automated testing in multiple environments. Mathematical derivations must be verified for accuracy. Simulation examples must be validated across different versions of supported platforms. Updates to content must include version compatibility matrices.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other development practices for the textbook project. Amendments must be documented in Architecture Decision Records (ADRs) and approved by the core editorial team. All pull requests and code reviews must verify compliance with these principles. Content complexity must be justified in terms of pedagogical value. Use this constitution for all development and review decisions.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.1.0 | **Ratified**: 2025-01-15 | **Last Amended**: 2025-12-08

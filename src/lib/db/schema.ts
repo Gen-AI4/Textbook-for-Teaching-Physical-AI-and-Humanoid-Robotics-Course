@@ -1,6 +1,6 @@
 import { sqliteTable, text, integer, blob } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
-import { users, sessions, verificationTokens } from "../../../node_modules/better-auth/dist/db.js";
+import { users, sessions, verificationTokens } from "better-auth/db";
 
 // Extend BetterAuth user schema with onboarding fields
 export const extendedUsers = users.extend({

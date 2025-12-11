@@ -1,5 +1,5 @@
-import { betterAuth } from "../../node_modules/better-auth/dist/index.js";
-import { drizzleAdapter } from "../../node_modules/better-auth/dist/adapters/drizzle.js";
+import { betterAuth } from "better-auth";
+import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { customUserMetadata, extendedUsers } from "./db/schema";
 import { db } from "./db";
 

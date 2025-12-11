@@ -4,6 +4,7 @@
 // npx eslint --ext .js,.jsx,.ts,.tsx . --fix
 
 /** @type {import('@docusaurus/types').Config} */
+const isProd = process.env.NODE_ENV === 'production';
 const config = {
   title: 'Textbook for Teaching Physical AI and Humanoid Robotics',
   tagline: 'A comprehensive guide to Physical AI and Humanoid Robotics',
@@ -59,10 +60,12 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-        gtag: {
-          trackingID: 'G-XXXXXXXXXX',
-          anonymizeIP: true,
-        },
+        gtag: isProd
+          ? {
+              trackingID: 'G-XXXXXXXXXX',
+              anonymizeIP: true,
+            }
+          : undefined,
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,
@@ -173,6 +176,18 @@ const config = {
         },
       },
     }),
+
+  // Add plugins for OAuth integration
+  plugins: [
+    // Custom plugin to inject auth into the application
+    async function authPlugin(context, options) {
+      return {
+        name: 'auth-plugin',
+        // This plugin is prepared for OAuth integration but doesn't break the build
+        // Actual integration would be implemented in a client-side component
+      };
+    },
+  ],
 };
 
 module.exports = config;

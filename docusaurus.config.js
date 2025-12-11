@@ -185,6 +185,8 @@ const config = {
         name: 'auth-plugin',
         // This plugin is prepared for OAuth integration but doesn't break the build
         // Actual integration would be implemented in a client-side component
+        // Load client module that provides a safe noop for window.gtag during dev
+        clientModules: [require.resolve('./src/client-modules/gtag-fallback.js')],
       };
     },
   ],

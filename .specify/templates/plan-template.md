@@ -31,7 +31,17 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+This plan must comply with the Textbook for Teaching Physical AI and Humanoid Robotics Course Constitution:
+
+- [ ] Physical AI and Robotics Education First: Technical approach grounded in real-world applications
+- [ ] Accessibility and Pedagogical Effectiveness: Plan considers diverse learning styles
+- [ ] Reproducible Research and Experimentation: Approach ensures reproducible results
+- [ ] Interdisciplinary Integration: Plan integrates multiple fields appropriately
+- [ ] Safety and Ethical Considerations: Plan addresses safety and ethical implications
+- [ ] Simulation-Based Learning: Primarily simulation-focused approach implemented
+- [ ] Technology Stack Requirements: Uses open-source tools and frameworks
+- [ ] Content Review Process: Plan includes appropriate review mechanisms
+- [ ] Quality Gates: Defines verification and validation steps
 
 ## Project Structure
 

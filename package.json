@@ -1,0 +1,56 @@
+{
+  "name": "rag-application",
+  "version": "1.0.0",
+  "description": "A RAG application with BetterAuth, Hono, and Drizzle ORM",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "tsx watch server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx migrations/migrate.ts"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.9.2",
+    "@docusaurus/module-type-aliases": "^3.9.2",
+    "@docusaurus/plugin-client-redirects": "^3.9.2",
+    "@docusaurus/preset-classic": "^3.9.2",
+    "@docusaurus/types": "^3.9.2",
+    "@hono/node-server": "^1.10.0",
+    "@hono/zod-validator": "^0.2.0",
+    "@huggingface/inference": "^2.8.1",
+    "@langchain/community": "^0.0.30",
+    "@langchain/core": "^1.1.4",
+    "@langchain/openai": "^0.0.15",
+    "@libsql/client": "^0.5.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "better-auth": "^1.4.6",
+    "better-sqlite3": "^9.0.0",
+    "dotenv": "^17.2.3",
+    "drizzle-kit": "^0.20.0",
+    "drizzle-orm": "^0.30.0",
+    "hono": "^4.0.0",
+    "langchain": "^0.1.20",
+    "mammoth": "^1.11.0",
+    "openai": "^4.24.7",
+    "pdf-parse": "^1.1.4",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tsx": "^4.7.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "rag",
+    "ai",
+    "hono",
+    "better-auth",
+    "drizzle",
+    "typescript"
+  ],
+  "author": "AI Assistant",
+  "license": "MIT"
+}

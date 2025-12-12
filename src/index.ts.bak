@@ -1,0 +1,38 @@
+import { Hono } from "hono";
+import { logger } from "hono/logger";
+import { auth } from "./lib/auth";
+import authRoutes from "./routes/auth";
+import documentRoutes from "./routes/documents";
+import ragRoutes from "./routes/rag";
+import chatRoutes from "./routes/chat";
+
+const app = new Hono();
+
+// Add logger middleware
+app.use("*", logger());
+
+// Apply auth middleware to all routes
+app.use("*", async (c, next) => {
+  // Get the auth session from the request
+  const authRequest = auth.api.handleAuth(c.req.raw);
+  c.set("auth", authRequest);
+  return next();
+});
+
+// Mount routes - BetterAuth routes are now available via authRoutes
+app.route("/api/auth", authRoutes);
+app.route("/api/documents", documentRoutes);
+app.route("/api/rag", ragRoutes);
+app.route("/api/chat", chatRoutes);
+
+// Root route
+app.get("/", (c) => {
+  return c.text("RAG Application Server");
+});
+
+// Health check endpoint
+app.get("/health", (c) => {
+  return c.json({ status: "OK", timestamp: new Date().toISOString() });
+});
+
+export default app;

@@ -1,0 +1,129 @@
+# Configuration Contract: Docusaurus Textbook
+
+## Site Configuration Schema
+
+```yaml
+# docusaurus.config.js
+title: string                    # Site title (required)
+tagline: string                  # Site tagline (required)
+url: string                      # Site URL (required)
+baseUrl: string                  # Base URL path (required)
+onBrokenLinks: string           # Behavior when encountering broken links ('throw', 'warn', 'ignore')
+onBrokenAnchors: string         # Behavior when encountering broken anchors ('throw', 'ignore')
+favicon: string                 # Favicon path (required)
+i18n:
+  defaultLocale: string         # Default language code (e.g., 'en')
+  locales: string[]             # List of supported locales (e.g., ['en', 'es', 'fr'])
+  path: string                  # Path to translation files
+
+# Theme configuration
+themeConfig:
+  navbar:
+    title: string               # Navbar title
+    logo:                       # Logo configuration
+      alt: string               # Alt text for logo
+      src: string               # Path to logo image
+    items:                      # Navbar items
+      - type: string            # Item type ('doc', 'docSidebar', 'link', 'dropdown', 'search', 'html')
+        position: string        # Position ('left', 'right')
+        label: string           # Display label (for links/dropdowns)
+        to: string              # Internal link (for 'doc' type)
+        href: string            # External link (for 'link' type)
+        docId: string           # Document ID (for 'doc' type)
+        items: []               # Sub-items (for 'dropdown' type)
+  
+  footer:
+    style: string               # Footer style ('dark', 'light')
+    links: []                   # Footer links
+      - title: string           # Section title
+        items: []               # Link items
+          - label: string       # Link label
+            to: string          # Link destination
+    copyright: string           # Copyright text
+
+  prism:
+    theme: object               # Light theme for code blocks
+    darkTheme: object           # Dark theme for code blocks
+    additionalLanguages: string[] # Additional syntax highlighting languages
+
+# Plugin configuration
+presets:
+  - '@docusaurus/preset-classic':
+      docs:
+        sidebarPath: string     # Path to sidebar configuration
+        editUrl: string         # URL for editing content
+        showLastUpdateAuthor: boolean  # Show author of last update
+        showLastUpdateTime: boolean    # Show time of last update
+      blog:                     # Blog configuration (optional)
+        path: string
+        routeBasePath: string
+      theme:                    # Theme configuration
+        customCss: string       # Path to custom CSS file
+      sitemap:                  # Sitemap configuration
+        changefreq: string      # Change frequency ('always', 'hourly', 'daily', etc.)
+        priority: number        # Priority (0.0 to 1.0)
+        filename: string        # Sitemap filename
+      gtag:                     # Google Analytics (optional)
+        trackingID: string
+        anonymizeIP: boolean
+
+plugins:
+  - '@docusaurus/plugin-content-docs':
+      id: string
+      path: string              # Path to docs directory
+      routeBasePath: string     # Base URL for docs
+      sidebarPath: string       # Path to sidebar configuration
+  - '@docusaurus/plugin-content-blog': # Blog plugin (if needed)
+  - '@docusaurus/plugin-content-pages': # Pages plugin
+  - '@docusaurus/plugin-sitemap': # Sitemap plugin
+  - '@docusaurus/plugin-google-analytics': # Analytics plugin
+  - '@docusaurus/plugin-pwa': # PWA plugin (optional)
+```
+
+## Sidebar Configuration Schema
+
+```javascript
+// sidebars.js
+module.exports = {
+  docs: [
+    {
+      type: 'category',          // Type of sidebar item
+      label: string,             // Display label
+      items: [string],           // Array of doc IDs or nested categories
+      link: {                    // Optional link for the category
+        type: string,            // 'doc' or 'generated-index'
+        id: string,              // Doc ID if type is 'doc'
+        title: string,           // Title if type is 'generated-index'
+        description: string,     // Description if type is 'generated-index'
+      },
+      collapsed: boolean,        // Whether category is collapsed by default
+    },
+    {
+      type: 'doc',               // Direct link to a document
+      id: string,                // Document ID
+      label: string,             // Custom label (optional)
+    },
+    {
+      type: 'link',              // External link
+      label: string,             // Link text
+      href: string,              // External URL
+    }
+  ]
+};
+```
+
+## Authentication Contract (OAuth for Institutional Access)
+
+The OAuth integration will follow industry-standard protocols:
+
+- Endpoint for initiating OAuth flow
+- Callback endpoint to receive tokens after authentication
+- Middleware to protect routes based on authentication status
+- Configuration options for different OAuth providers (institution-specific)
+
+## Multi-language Support Contract
+
+- Translation files in `/i18n/{locale}/` directory structure
+- Frontmatter in markdown files to specify translatable content
+- Automatic language switching based on user preference or browser settings
+- Fallback mechanism when specific translations are not available

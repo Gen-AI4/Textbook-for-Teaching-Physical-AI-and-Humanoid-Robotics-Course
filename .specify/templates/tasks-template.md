@@ -77,6 +77,14 @@ Examples of foundational tasks (adjust based on your project):
 
 **Goal**: [Brief description of what this story delivers]
 
+**Constitution Alignment**:
+- [ ] Physical AI and Robotics Education First: Content grounded in real-world applications
+- [ ] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
+- [ ] Reproducible Research and Experimentation: Fully reproducible content
+- [ ] Interdisciplinary Integration: Integrates multiple fields appropriately
+- [ ] Safety and Ethical Considerations: Addresses safety and ethical implications
+- [ ] Simulation-Based Learning: Follows simulation-first approach
+
 **Independent Test**: [How to verify this story works on its own]
 
 ### Tests for User Story 1 (OPTIONAL - only if tests requested) ⚠️
@@ -103,6 +111,14 @@ Examples of foundational tasks (adjust based on your project):
 
 **Goal**: [Brief description of what this story delivers]
 
+**Constitution Alignment**:
+- [ ] Physical AI and Robotics Education First: Content grounded in real-world applications
+- [ ] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
+- [ ] Reproducible Research and Experimentation: Fully reproducible content
+- [ ] Interdisciplinary Integration: Integrates multiple fields appropriately
+- [ ] Safety and Ethical Considerations: Addresses safety and ethical implications
+- [ ] Simulation-Based Learning: Follows simulation-first approach
+
 **Independent Test**: [How to verify this story works on its own]
 
 ### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
@@ -124,6 +140,14 @@ Examples of foundational tasks (adjust based on your project):
 ## Phase 5: User Story 3 - [Title] (Priority: P3)
 
 **Goal**: [Brief description of what this story delivers]
+
+**Constitution Alignment**:
+- [ ] Physical AI and Robotics Education First: Content grounded in real-world applications
+- [ ] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
+- [ ] Reproducible Research and Experimentation: Fully reproducible content
+- [ ] Interdisciplinary Integration: Integrates multiple fields appropriately
+- [ ] Safety and Ethical Considerations: Addresses safety and ethical implications
+- [ ] Simulation-Based Learning: Follows simulation-first approach
 
 **Independent Test**: [How to verify this story works on its own]
 

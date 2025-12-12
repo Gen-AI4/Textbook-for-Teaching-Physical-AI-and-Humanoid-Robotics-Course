@@ -1,17 +1,9 @@
 <!-- SYNC IMPACT REPORT
-- Version change: 1.0.0 → 1.1.0
-- Modified principles:
-  - Principle 1: Content focused on Physical AI and Robotics education
-  - Principle 2: Content focused on accessibility and pedagogical effectiveness
-  - Principle 3: Content focused on reproducible research and experimentation
-  - Principle 4: Content focused on interdisciplinary integration
-  - Principle 5: Content focused on safety and ethical considerations
-  - Principle 6: Added principle for simulation-based learning
-- Governance: Added specific governance rules for textbook content
-- Templates requiring updates:
-  - .specify/templates/plan-template.md: ✅ updated
-  - .specify/templates/spec-template.md: ✅ updated
-  - .specify/templates/tasks-template.md: ✅ updated
+- Version change: 1.1.0 → 1.1.1
+- Modified principles: None
+- Added sections: None
+- Removed sections: None
+- Templates requiring updates: None
 - Follow-up TODOs: None
 -->
 
@@ -57,4 +49,4 @@ All code examples must pass automated testing in multiple environments. Mathemat
 
 This constitution supersedes all other development practices for the textbook project. Amendments must be documented in Architecture Decision Records (ADRs) and approved by the core editorial team. All pull requests and code reviews must verify compliance with these principles. Content complexity must be justified in terms of pedagogical value. Use this constitution for all development and review decisions.
 
-**Version**: 1.1.0 | **Ratified**: 2025-01-15 | **Last Amended**: 2025-12-08
+**Version**: 1.1.1 | **Ratified**: 2025-01-15 | **Last Amended**: 2025-12-09

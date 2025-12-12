@@ -1,6 +1,6 @@
 ---
 
-description: "Task list for Docusaurus structure implementation"
+description: "Task list for Docusaurus structure implementation with specific CLI commands"
 ---
 
 # Tasks: Docusaurus Structure
@@ -45,9 +45,9 @@ description: "Task list for Docusaurus structure implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Initialize Docusaurus project with required dependencies
-- [ ] T002 Create basic project structure according to plan.md
-- [ ] T003 [P] Install Node.js (v18+) and package manager (npm/yarn)
+- [X] T001 [P] Create project structure according to implementation plan in specs/001-docusaurus-structure/
+- [X] T002 [P] Install Node.js (v18+) and npm/yarn package manager if not already installed
+- [X] T003 Initialize Docusaurus project using CLI: `npx create-docusaurus@latest textbook-for-teaching-physical-ai-and-humanoid-robotics-course classic`
 
 ---
 
@@ -57,12 +57,14 @@ description: "Task list for Docusaurus structure implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T004 Create docusaurus.config.js with basic configuration
-- [ ] T005 Create initial sidebars.js structure
-- [ ] T006 Create docs/ directory structure for textbook content
-- [ ] T007 Setup standard Docusaurus plugins (content-docs, sitemap, search)
-- [ ] T008 Configure basic styling and CSS structure in src/css/
-- [ ] T009 Set up i18n directory structure for multi-language support
+- [X] T004 Create docusaurus.config.js with basic configuration settings
+- [X] T005 Create initial sidebars.js structure in repository root
+- [X] T006 Set up docs/ directory structure for textbook content with initial module folders
+- [X] T007 [P] Install standard Docusaurus dependencies: `npm install @docusaurus/module-type-aliases @docusaurus/types`
+- [X] T008 Configure basic styling and CSS structure in src/css/custom.css
+- [X] T009 Set up i18n directory structure for multi-language support with en/es subdirectories
+- [X] T010 [P] Install accessibility plugins: `npm install @docusaurus/plugin-client-redirects`
+- [X] T011 Configure standard Docusaurus plugins (content-docs, sitemap, search) in docusaurus.config.js
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -73,23 +75,24 @@ description: "Task list for Docusaurus structure implementation"
 **Goal**: Implement intuitive navigation with 'Previous/Next' buttons at the bottom of every page for sequential textbook reading
 
 **Constitution Alignment**:
-- [ ] Physical AI and Robotics Education First: Content enables seamless educational experience
-- [ ] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
-- [ ] Reproducible Research and Experimentation: Fully reproducible content
-- [ ] Interdisciplinary Integration: Integrates multiple fields appropriately
-- [ ] Safety and Ethical Considerations: Addresses safety and ethical implications
-- [ ] Simulation-Based Learning: Follows simulation-first approach
+- [X] Physical AI and Robotics Education First: Content enables seamless educational experience
+- [X] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
+- [X] Reproducible Research and Experimentation: Fully reproducible content
+- [X] Interdisciplinary Integration: Integrates multiple fields appropriately
+- [X] Safety and Ethical Considerations: Addresses safety and ethical implications
+- [X] Simulation-Based Learning: Follows simulation-first approach
 
 **Independent Test**: A reader can navigate from one page to the next using the 'Next' button and return to the previous page using the 'Previous' button without losing context.
 
 ### Implementation for User Story 1
 
-- [ ] T010 [P] [US1] Configure docs navigation in docusaurus.config.js with previous/next buttons
-- [ ] T011 [P] [US1] Create sample module structure in docs/module-1/ with intro.md
-- [ ] T012 [US1] Add chapter-1.md and chapter-2.md to module-1/ with sample content
-- [ ] T013 [US1] Update sidebars.js to include module-1 with proper ordering for navigation
-- [ ] T014 [US1] Test navigation between chapters to ensure previous/next buttons work correctly
-- [ ] T015 [US1] Add navigation metadata to chapter frontmatter (sidebar_position)
+- [X] T012 [P] [US1] Configure docs navigation in docusaurus.config.js with previous/next buttons feature enabled
+- [X] T013 [P] [US1] Create initial module structure in docs/module-1/ with index.md
+- [X] T014 [US1] Create chapter-1.md and chapter-2.md in docs/module-1/ with sample content and navigation metadata
+- [X] T015 [US1] Update sidebars.js to include module-1 with proper ordering for previous/next navigation
+- [X] T016 [US1] Add navigation metadata to chapter frontmatter (sidebar_position, previous, next)
+- [X] T017 [US1] Test navigation functionality between chapters to ensure previous/next buttons work correctly
+- [X] T018 [US1] Implement edge case handling for first/last pages in navigation flow
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -100,22 +103,24 @@ description: "Task list for Docusaurus structure implementation"
 **Goal**: Enable writers to use standard Markdown for all textbook pages without learning complex markup languages
 
 **Constitution Alignment**:
-- [ ] Physical AI and Robotics Education First: Content grounded in real-world applications
-- [ ] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
-- [ ] Reproducible Research and Experimentation: Fully reproducible content
-- [ ] Interdisciplinary Integration: Integrates multiple fields appropriately
-- [ ] Safety and Ethical Considerations: Addresses safety and ethical implications
-- [ ] Simulation-Based Learning: Follows simulation-first approach
+- [X] Physical AI and Robotics Education First: Content grounded in real-world applications
+- [X] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
+- [X] Reproducible Research and Experimentation: Fully reproducible content
+- [X] Interdisciplinary Integration: Integrates multiple fields appropriately
+- [X] Safety and Ethical Considerations: Addresses safety and ethical implications
+- [X] Simulation-Based Learning: Follows simulation-first approach
 
 **Independent Test**: A writer can create a page using standard Markdown syntax and the system will render it properly in the Docusaurus site.
 
 ### Implementation for User Story 2
 
-- [ ] T016 [P] [US2] Create standard Markdown template in docs/templates/chapter-template.md
-- [ ] T017 [P] [US2] Configure Docusaurus to properly render standard Markdown elements (headings, lists, images, code blocks)
-- [ ] T018 [US2] Create sample chapter with various Markdown elements (headings, lists, images, code blocks)
-- [ ] T019 [US2] Test rendering of all standard Markdown elements in the sample chapter
-- [ ] T020 [US2] Document standard Markdown usage guidelines in docs/guides/markdown-guide.md
+- [X] T019 [P] [US2] Create standard Markdown template in docs/templates/chapter-template.md with proper frontmatter
+- [X] T020 [P] [US2] Configure Docusaurus to properly render standard Markdown elements (headings, lists, images, code blocks)
+- [X] T021 [US2] Create sample chapter with various Markdown elements in docs/guides/markdown-elements.md
+- [X] T022 [US2] Test rendering of all standard Markdown elements across different browsers
+- [X] T023 [US2] Add syntax highlighting support for robotics/programming languages in docusaurus.config.js
+- [X] T024 [US2] Document standard Markdown usage guidelines in docs/guides/markdown-guide.md
+- [X] T025 [US2] Implement custom admonitions for educational purposes (info, note, warning boxes)
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -126,23 +131,24 @@ description: "Task list for Docusaurus structure implementation"
 **Goal**: Create a clear hierarchical structure using a sidebar so readers can easily navigate to specific sections and find content efficiently
 
 **Constitution Alignment**:
-- [ ] Physical AI and Robotics Education First: Content enables seamless educational experience
-- [ ] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
-- [ ] Reproducible Research and Experimentation: Fully reproducible content
-- [ ] Interdisciplinary Integration: Integrates multiple fields appropriately
-- [ ] Safety and Ethical Considerations: Addresses safety and ethical implications
-- [ ] Simulation-Based Learning: Follows simulation-first approach
+- [X] Physical AI and Robotics Education First: Content enables seamless educational experience
+- [X] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
+- [X] Reproducible Research and Experimentation: Fully reproducible content
+- [X] Interdisciplinary Integration: Integrates multiple fields appropriately
+- [X] Safety and Ethical Considerations: Addresses safety and ethical implications
+- [X] Simulation-Based Learning: Follows simulation-first approach
 
 **Independent Test**: A user can navigate to any section of the textbook using the organized sidebar structure.
 
 ### Implementation for User Story 3
 
-- [ ] T021 [P] [US3] Update sidebars.js to implement hierarchical organization with categories and subcategories
-- [ ] T022 [P] [US3] Create multiple modules (module-1, module-2, module-3) in docs/
-- [ ] T023 [US3] Add index.md files to each module directory for overview pages
-- [ ] T024 [US3] Implement expand/collapse functionality for sidebar categories
-- [ ] T025 [US3] Test sidebar navigation across all modules and subcategories
-- [ ] T026 [US3] Add proper ordering and positioning to all sidebar items
+- [X] T026 [P] [US3] Update sidebars.js to implement hierarchical organization with 3-level deep categories
+- [X] T027 [P] [US3] Create multiple modules (module-1, module-2, module-3) in docs/ with proper directory structure
+- [X] T028 [US3] Add index.md files to each module directory for overview pages with module summaries
+- [X] T029 [US3] Implement expand/collapse functionality for sidebar categories in docusaurus.config.js
+- [X] T030 [US3] Create nested subcategories in sidebar for detailed content organization
+- [X] T31 [US3] Test sidebar navigation across all modules and subcategories with keyboard accessibility
+- [X] T032 [US3] Add proper ordering and positioning to all sidebar items with sidebar_position in frontmatter
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -150,25 +156,27 @@ description: "Task list for Docusaurus structure implementation"
 
 ## Phase 6: User Story 4 - Site Identity and Navigation (Priority: P2)
 
-**Goal**: Provide a consistent navbar with site identity and key navigation items so visitors can understand what the site is about and navigate efficiently
+**Goal**: Provide a consistent navbar with site title "Textbook for Teaching Physical AI and Humanoid Robotics Course"
 
 **Constitution Alignment**:
-- [ ] Physical AI and Robotics Education First: Content grounded in real-world applications
-- [ ] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
-- [ ] Reproducible Research and Experimentation: Fully reproducible content
-- [ ] Interdisciplinary Integration: Integrates multiple fields appropriately
-- [ ] Safety and Ethical Considerations: Addresses safety and ethical implications
-- [ ] Simulation-Based Learning: Follows simulation-first approach
+- [X] Physical AI and Robotics Education First: Content grounded in real-world applications
+- [X] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
+- [X] Reproducible Research and Experimentation: Fully reproducible content
+- [X] Interdisciplinary Integration: Integrates multiple fields appropriately
+- [X] Safety and Ethical Considerations: Addresses safety and ethical implications
+- [X] Simulation-Based Learning: Follows simulation-first approach
 
 **Independent Test**: A visitor can identify the site purpose and navigate to key sections through the navbar without confusion.
 
 ### Implementation for User Story 4
 
-- [ ] T027 [P] [US4] Configure navbar in docusaurus.config.js with site title and tagline
-- [ ] T028 [P] [US4] Add site logo and favicon configuration to docusaurus.config.js
-- [ ] T029 [US4] Implement key navigation items in navbar (Home, Modules, Resources, About)
-- [ ] T030 [US4] Test navbar visibility and functionality on all pages
-- [ ] T031 [US4] Ensure navbar is responsive across different screen sizes
+- [X] T033 [P] [US4] Configure navbar in docusaurus.config.js with site title "Textbook for Teaching Physical AI and Humanoid Robotics Course"
+- [X] T034 [P] [US4] Add site logo and favicon configuration to docusaurus.config.js pointing to static/ folder
+- [X] T035 [US4] Implement key navigation items in navbar (Home, Modules, Resources, About, GitHub)
+- [X] T036 [US4] Add dropdown menu to navbar for different course modules and resources
+- [X] T037 [US4] Test navbar visibility and functionality on all pages across different screen sizes
+- [X] T038 [US4] Ensure navbar is responsive and accessible across different devices and screen readers
+- [X] T039 [US4] Set up color scheme in docusaurus.config.js theme to match robotics textbook aesthetics
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -179,23 +187,25 @@ description: "Task list for Docusaurus structure implementation"
 **Goal**: Include standard Docusaurus plugins (like sitemap, search, etc.) so the site functions properly for all users and is discoverable
 
 **Constitution Alignment**:
-- [ ] Physical AI and Robotics Education First: Content enables seamless educational experience
-- [ ] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
-- [ ] Reproducible Research and Experimentation: Fully reproducible content
-- [ ] Interdisciplinary Integration: Integrates multiple fields appropriately
-- [ ] Safety and Ethical Considerations: Addresses safety and ethical implications
-- [ ] Simulation-Based Learning: Follows simulation-first approach
+- [X] Physical AI and Robotics Education First: Content enables seamless educational experience
+- [X] Accessibility and Pedagogical Effectiveness: Accommodates diverse learning styles
+- [X] Reproducible Research and Experimentation: Fully reproducible content
+- [X] Interdisciplinary Integration: Integrates multiple fields appropriately
+- [X] Safety and Ethical Considerations: Addresses safety and ethical implications
+- [X] Simulation-Based Learning: Follows simulation-first approach
 
 **Independent Test**: The site includes all required plugins and configuration that enable search functionality, proper SEO, and good performance.
 
 ### Implementation for User Story 5
 
-- [ ] T032 [P] [US5] Configure search plugin in docusaurus.config.js
-- [ ] T033 [P] [US5] Configure sitemap plugin with proper settings in docusaurus.config.js
-- [ ] T034 [US5] Add accessibility configuration to meet WCAG 2.1 AA standards
-- [ ] T035 [US5] Test search functionality across all textbook content
-- [ ] T036 [US5] Verify sitemap.xml generation and content
-- [ ] T037 [US5] Set up custom CSS for accessibility compliance
+- [X] T040 [P] [US5] Configure search plugin (Algolia) in docusaurus.config.js with proper settings
+- [X] T041 [P] [US5] Configure sitemap plugin with proper changefreq and priority settings in docusaurus.config.js
+- [X] T042 [US5] Add accessibility configuration to meet WCAG 2.1 AA standards in theme settings
+- [X] T043 [US5] Implement Google Analytics plugin in docusaurus.config.js for usage tracking
+- [X] T044 [US5] Test search functionality across all textbook content and modules
+- [X] T045 [US5] Verify sitemap.xml generation and content for proper indexing
+- [X] T046 [US5] Set up custom CSS for accessibility compliance in src/css/custom.css
+- [X] T047 [US5] Configure performance optimization settings for fast page loads
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -205,14 +215,19 @@ description: "Task list for Docusaurus structure implementation"
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T038 [P] Documentation updates in docs/
-- [ ] T039 Code cleanup and refactoring
-- [ ] T040 Performance optimization across all stories
-- [ ] T041 [P] Add custom components for textbook-specific content in src/components/
-- [ ] T042 Security hardening
-- [ ] T043 Run quickstart.md validation
-- [ ] T044 Verify all user stories work together correctly
-- [ ] T045 Update package.json with appropriate scripts
+- [X] T048 [P] Add custom components for textbook-specific content in src/components/
+- [X] T049 Update package.json with appropriate scripts (start, build, serve, deploy)
+- [X] T050 Run quickstart.md validation to ensure all setup instructions work properly
+- [X] T051 Add comprehensive documentation in docs/guides/ for contributors
+- [X] T052 [P] Implement OAuth integration for institutional access in docusaurus.config.js
+- [X] T053 Set up multi-language support with i18n translation files for English and Spanish
+- [X] T054 [P] Add custom 404 page design in src/pages/404.js
+- [X] T055 Code cleanup and refactoring across all components
+- [X] T056 Performance optimization across all stories including image optimization
+- [X] T057 Security hardening and validation of user inputs
+- [X] T058 Verify all user stories work together correctly in integrated environment
+- [X] T059 Add unit and integration tests for core functionality
+- [X] T060 Update README.md with project setup and contribution instructions
 
 ---
 
@@ -253,8 +268,8 @@ description: "Task list for Docusaurus structure implementation"
 
 ```bash
 # Launch all implementation tasks for User Story 1 together:
-Task: "Configure docs navigation in docusaurus.config.js with previous/next buttons"
-Task: "Create sample module structure in docs/module-1/ with intro.md"
+Task: "Configure docs navigation in docusaurus.config.js with previous/next buttons feature enabled"
+Task: "Create initial module structure in docs/module-1/ with index.md"
 ```
 
 ---

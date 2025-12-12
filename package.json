@@ -1,48 +1,56 @@
 {
-  "name": "textbook-for-teaching-physical-ai-and-humanoid-robotics",
-  "version": "0.0.0",
-  "private": true,
+  "name": "rag-application",
+  "version": "1.0.0",
+  "description": "A RAG application with BetterAuth, Hono, and Drizzle ORM",
+  "main": "server.ts",
   "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
-    "format": "prettier --write ."
+    "dev": "tsx watch server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx migrations/migrate.ts"
   },
   "dependencies": {
-    "@docusaurus/core": "3.1.0",
-    "@docusaurus/preset-classic": "3.1.0",
-    "@mdx-js/react": "^3.0.0",
-    "clsx": "^2.0.0",
-    "prism-react-renderer": "^2.3.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "@docusaurus/core": "^3.9.2",
+    "@docusaurus/module-type-aliases": "^3.9.2",
+    "@docusaurus/plugin-client-redirects": "^3.9.2",
+    "@docusaurus/preset-classic": "^3.9.2",
+    "@docusaurus/types": "^3.9.2",
+    "@hono/node-server": "^1.10.0",
+    "@hono/zod-validator": "^0.2.0",
+    "@huggingface/inference": "^2.8.1",
+    "@langchain/community": "^0.0.30",
+    "@langchain/core": "^1.1.4",
+    "@langchain/openai": "^0.0.15",
+    "@libsql/client": "^0.5.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "better-auth": "^1.4.6",
+    "better-sqlite3": "^9.0.0",
+    "dotenv": "^17.2.3",
+    "drizzle-kit": "^0.20.0",
+    "drizzle-orm": "^0.30.0",
+    "hono": "^4.0.0",
+    "langchain": "^0.1.20",
+    "mammoth": "^1.11.0",
+    "openai": "^4.24.7",
+    "pdf-parse": "^1.1.4",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tsx": "^4.7.0",
+    "zod": "^3.22.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.1.0",
-    "@docusaurus/tsconfig": "3.1.0",
-    "@docusaurus/types": "3.1.0",
-    "typescript": "~5.2.2"
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
   },
-  "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 3 chrome version",
-      "last 3 firefox version",
-      "last 5 safari version"
-    ]
-  },
-  "engines": {
-    "node": ">=18.0"
-  }
+  "keywords": [
+    "rag",
+    "ai",
+    "hono",
+    "better-auth",
+    "drizzle",
+    "typescript"
+  ],
+  "author": "AI Assistant",
+  "license": "MIT"
 }

@@ -1,21 +1,25 @@
 import { sqliteTable, text, integer, blob } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
-import { users, sessions, verificationTokens } from "better-auth/db";
 
-// Extend BetterAuth user schema with onboarding fields
-export const extendedUsers = users.extend({
-  onboarded: integer("onboarded", { mode: "boolean" }).default(false),
-  username: text("username").unique(),
+// Define the extended users table with all fields
+export const extendedUsers = sqliteTable("ba_user", {
+  id: text("id").primaryKey(),
+  email: text("email").notNull().unique(),
+  emailVerified: integer("email_verified", { mode: "boolean" }).default(false),
   firstName: text("first_name"),
   lastName: text("last_name"),
-  bio: text("bio"),
-  profilePicture: blob("profile_picture", { mode: "buffer" }),
+  image: text("image"),
   createdAt: text("created_at")
     .default(sql`CURRENT_TIMESTAMP`)
     .notNull(),
   updatedAt: text("updated_at")
     .default(sql`CURRENT_TIMESTAMP`)
     .notNull(),
+  // Extended fields
+  onboarded: integer("onboarded", { mode: "boolean" }).default(false),
+  username: text("username").unique(),
+  bio: text("bio"),
+  profilePicture: blob("profile_picture", { mode: "buffer" }),
 });
 
 export const customUserMetadata = sqliteTable("user_metadata", {

@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "package.json",
@@ -6,9 +7,39 @@
       "config": {
         "distDir": "build"
       }
+    },
+    {
+      "src": "vercel-server.ts",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["build/**", "src/**", "node_modules/**"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/vercel-server.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/vercel-server.ts"
     }
   ],
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    },
     {
       "source": "/api/(.*)",
       "headers": [

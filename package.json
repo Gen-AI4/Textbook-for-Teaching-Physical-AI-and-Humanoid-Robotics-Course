@@ -6,11 +6,13 @@
     "dev": "docusaurus start",
     "docusaurus": "docusaurus",
     "build": "docusaurus build",
+    "build:vercel": "npm run build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "start": "docusaurus serve",
+    "vercel:build": "npm run build && tsc --build",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx migrations/migrate.ts"
   },

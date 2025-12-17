@@ -8,5 +8,8 @@
     "types": ["node"],
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx"
-  }
+  },
+  "exclude": [
+    "The-Book/**/*"
+  ]
 }

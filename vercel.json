@@ -12,7 +12,7 @@
       "src": "vercel-server.ts",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["build/**", "src/**", "node_modules/**"]
+        "includeFiles": ["build/**", "src/**", "node_modules/**", "docusaurus.config.js", "sidebars.js"]
       }
     }
   ],

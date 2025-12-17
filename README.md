@@ -128,3 +128,18 @@ This project follows a modular architecture with clear separation of concerns:
 ## License
 
 MIT
+
+## Deploy on Vercel
+
+The easiest way to deploy this application is to use the Vercel Platform from the creators of Next.js. Follow these steps:
+
+1. Push your code to a Git repository (GitHub, GitLab, Bitbucket)
+2. Go to [vercel.com](https://vercel.com) and sign up or sign in
+3. Click "New Project" and import your repository
+4. Configure your project with these settings:
+   - Framework Preset: `Other` (since this is a Docusaurus/Hono hybrid)
+   - Build Command: `npm run vercel:build`
+   - Output Directory: `build`
+   - Install Command: `npm install`
+
+Your application will be deployed to a URL similar to `https://your-project-name.vercel.app`

@@ -23,7 +23,8 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/vercel-server.ts"
+      "dest": "/build/$1",
+      "check": true
     }
   ],
   "headers": [

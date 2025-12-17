@@ -1,28 +1,24 @@
-# RAG Application with BetterAuth, Hono, and Drizzle ORM
+# Textbook for Teaching Physical AI and Humanoid Robotics
 
-This project implements a RAG (Retrieval Augmented Generation) application with authentication and document processing capabilities. It uses BetterAuth for authentication, Hono for the web framework, Drizzle ORM for database management, and LangChain for RAG functionality.
+This project implements a comprehensive textbook and course materials for teaching Physical AI and Humanoid Robotics. It uses Docusaurus to create a modern, interactive documentation site with modules on ROS 2, Physical AI, and related topics.
 
 ## Features
 
-- **Authentication System**: Using BetterAuth with extended user schema
-- **Document Processing**: Upload and process PDF, DOCX, and TXT files
-- **RAG Functionality**: Query documents with AI-powered responses
-- **Chat Interface**: Interactive chat with document context
-- **User Profiles**: Extended user profiles with onboarding fields
+- **Modular Content Structure**: Organized content by modules covering different aspects of Physical AI and Humanoid Robotics
+- **Interactive Documentation**: Clean, accessible interface for learning complex robotics concepts
+- **Resource Integration**: Links to external resources, papers, and tools for deeper learning
+- **Responsive Design**: Works well on desktop and mobile devices
 
 ## Tech Stack
 
-- **Framework**: [Hono](https://hono.dev/) - Web framework
-- **Authentication**: [BetterAuth](https://better-auth.com/) - Authentication library
-- **Database**: SQLite with [Drizzle ORM](https://orm.drizzle.team/) - Database management
-- **AI/LLM**: [LangChain](https://js.langchain.com/) and [OpenAI](https://openai.com/) - For document processing and responses
-- **Validation**: [Zod](https://zod.dev/) - Schema validation
+- **Framework**: [Docusaurus](https://docusaurus.io/) - Static site generator optimized for documentation
+- **Deployment**: GitHub Pages - Free hosting for documentation sites
+- **Version Control**: Git and GitHub - Collaborative development and version history
 
 ## Prerequisites
 
 - Node.js v18 or higher
 - npm or yarn package manager
-- OpenAI API key
 
 ## Setup
 
@@ -31,115 +27,74 @@ This project implements a RAG (Retrieval Augmented Generation) application with 
 npm install
 ```
 
-2. Set up environment variables by creating a `.env` file:
-```env
-DATABASE_URL=./sqlite.db
-AUTH_SECRET=your-secret-key-here
-OPENAI_API_KEY=your-openai-api-key-here
-```
-
-3. Run database migrations:
-```bash
-npm run db:generate
-npm run db:migrate
-```
-
-## Running the Application
-
-To run in development mode:
+2. Start the development server:
 ```bash
 npm run dev
 ```
 
-To build and run in production mode:
-```bash
-npm run build
-npm start
-```
+3. Open [http://localhost:3000](http://localhost:3000) to view the site in your browser.
 
-## API Endpoints
+## Available Scripts
 
-### Authentication
-- `GET|POST|PUT|DELETE /api/auth/*` - BetterAuth standard endpoints
-- `GET /api/auth/profile` - Get user profile
-- `PUT /api/auth/profile` - Update user profile
-
-### Document Management
-- `POST /api/documents/upload` - Upload documents
-- `GET /api/documents` - List user's documents
-- `DELETE /api/documents/:id` - Delete document
-
-### RAG Processing
-- `POST /api/rag/process/:id` - Process document into chunks with embeddings
-- `POST /api/rag/search` - Search for relevant chunks based on query
-
-### Chat Interface
-- `POST /api/chat` - Create new chat
-- `GET /api/chat` - List user's chats
-- `GET /api/chat/:chatId/messages` - Get messages in a chat
-- `POST /api/chat/:chatId/message` - Send message and get AI response
+- `npm run dev` - Starts the development server
+- `npm run build` - Builds the static site for production
+- `npm run serve` - Serves the built site locally
+- `npm run deploy` - Deploys to GitHub Pages (if configured)
 
 ## Project Structure
 
 ```
-src/
-├── index.ts                # Main application
-├── lib/
-│   ├── auth.ts            # BetterAuth configuration
-│   └── db/
-│       ├── index.ts       # Database connection
-│       └── schema.ts      # Database schema
-├── routes/
-│   ├── auth.ts            # Authentication routes
-│   ├── documents.ts       # Document management routes
-│   ├── rag.ts             # RAG processing routes
-│   └── chat.ts            # Chat interface routes
-└── middleware/
-    └── auth-guard.ts      # Authentication middleware
+.
+├── docs/                   # Documentation content
+│   ├── intro.md           # Introduction to the textbook
+│   ├── resources.md       # Additional resources
+│   ├── about.md           # About the textbook
+│   └── module-*           # Module-specific documentation
+├── src/
+│   ├── css/
+│   │   └── custom.css     # Custom styles
+│   └── pages/             # Additional static pages
+├── static/                # Static assets like images, logos
+├── docusaurus.config.js   # Site configuration
+├── sidebars.js            # Sidebar navigation configuration
+└── package.json           # Project dependencies and scripts
 ```
-
-## Database Schema
-
-The application uses SQLite with the following tables:
-
-- `users` - Extended user information with onboarding fields
-- `documents` - Document metadata
-- `chunks` - Processed document chunks with embeddings
-- `chats` - Chat conversation metadata
-- `messages` - Individual messages in chats
 
 ## Development
 
-This project follows a modular architecture with clear separation of concerns:
-
-- **Authentication**: Handle authentication with BetterAuth
-- **Database**: Use Drizzle ORM for type-safe database operations
-- **API**: Implement RESTful endpoints with Hono
-- **RAG**: Process documents and generate AI responses with LangChain
-- **Security**: Apply authentication and validation middleware
-
-## Environment Variables
-
-- `DATABASE_URL` - Path to SQLite database file
-- `AUTH_SECRET` - Secret key for authentication
-- `OPENAI_API_KEY` - API key for OpenAI services
-- `PORT` - Server port (default: 3000)
+This project follows Docusaurus conventions for documentation sites. New pages can be created as MDX files in the `docs` directory, and navigation can be updated in `sidebars.js`.
 
 ## License
 
 MIT
 
-## Deploy on Vercel
+## Deployment Instructions
 
-The easiest way to deploy this application is to use the Vercel Platform from the creators of Next.js. Follow these steps:
+### Automated Deployment via GitHub Actions (Recommended)
 
-1. Push your code to a Git repository (GitHub, GitLab, Bitbucket)
-2. Go to [vercel.com](https://vercel.com) and sign up or sign in
-3. Click "New Project" and import your repository
-4. Configure your project with these settings:
-   - Framework Preset: `Other` (since this is a Docusaurus/Hono hybrid)
-   - Build Command: `npm run vercel:build`
-   - Output Directory: `build`
-   - Install Command: `npm install`
+The project is configured with a GitHub Actions workflow that will automatically deploy your site to GitHub Pages when you push to the main branch. The workflow is located at `.github/workflows/deploy.yml`.
 
-Your application will be deployed to a URL similar to `https://your-project-name.vercel.app`
+### Manual Deployment
+
+If you prefer to deploy manually, follow these steps:
+
+1. Build your site:
+```bash
+npm run build
+```
+
+2. The static files will be generated in the `build/` directory. To deploy to GitHub Pages:
+   - For user/organization sites: push the contents of `build/` to the `main` branch of your user/organization repository
+   - For project sites: push the contents of `build/` to the `gh-pages` branch of your project repository
+
+3. To deploy using the Docusaurus CLI:
+```bash
+GIT_USER=<Your GitHub username> npm run deploy
+```
+
+### Configuration Notes
+
+The site is configured in `docusaurus.config.js` with the appropriate settings for GitHub Pages deployment:
+- `baseUrl` is set to `/Textbook-for-Teaching-Physical-AI-and-Humanoid-Robotics-Course/`
+- `url` is set to `https://gen-ai4.github.io`
+- GitHub organization and project names are properly configured

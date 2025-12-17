@@ -11,15 +11,15 @@ const config = {
   favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
-  url: 'https://textbook-for-teaching-physical-ai-and-humanoid-robotics-course.vercel.app',
+  url: 'https://gen-ai4.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/Textbook-for-Teaching-Physical-AI-and-Humanoid-Robotics-Course/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ahmed-ali', // Usually your GitHub org/user name.
-  projectName: 'textbook-for-teaching-physical-ai-and-humanoid-robotics', // Usually your repo name.
+  organizationName: 'Gen-AI4', // Usually your GitHub org/user name.
+  projectName: 'Textbook-for-Teaching-Physical-AI-and-Humanoid-Robotics-Course', // Usually your repo name.
 
   onBrokenLinks: 'ignore',  // Changed from 'warn' to 'ignore' for deployment
   onBrokenAnchors: 'ignore', // Changed from 'warn' to 'ignore' for deployment
@@ -52,14 +52,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/ahmed-ali/textbook-for-teaching-physical-ai-and-humanoid-robotics-course/tree/main/',
+            'https://github.com/Gen-AI4/Textbook-for-Teaching-Physical-AI-and-Humanoid-Robotics-Course/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/ahmed-ali/textbook-for-teaching-physical-ai-and-humanoid-robotics-course/tree/main/',
+            'https://github.com/Gen-AI4/Textbook-for-Teaching-Physical-AI-and-Humanoid-Robotics-Course/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -118,7 +118,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/ahmed-ali/textbook-for-teaching-physical-ai-and-humanoid-robotics-course',
+            href: 'https://github.com/Gen-AI4/Textbook-for-Teaching-Physical-AI-and-Humanoid-Robotics-Course',
             label: 'GitHub',
             position: 'right',
           },
@@ -158,7 +158,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/ahmed-ali/textbook-for-teaching-physical-ai-and-humanoid-robotics-course',
+                href: 'https://github.com/Gen-AI4/Textbook-for-Teaching-Physical-AI-and-Humanoid-Robotics-Course',
               },
               {
                 label: 'Resources',

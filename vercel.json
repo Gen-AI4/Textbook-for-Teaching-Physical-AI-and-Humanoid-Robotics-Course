@@ -12,19 +12,20 @@
       "src": "vercel-server.ts",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["build/**", "src/**", "node_modules/**", "docusaurus.config.js", "sidebars.js"]
+        "includeFiles": [
+          "build/**",
+          "src/**",
+          "node_modules/**",
+          "docusaurus.config.js",
+          "sidebars.js"
+        ]
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/vercel-server.ts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/build/$1",
-      "check": true
+      "source": "/api/(.*)",
+      "destination": "/vercel-server.ts"
     }
   ],
   "headers": [

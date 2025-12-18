@@ -26,10 +26,6 @@
     {
       "source": "/api/(.*)",
       "destination": "/vercel-server.ts"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/build/$1"
     }
   ],
   "headers": [
